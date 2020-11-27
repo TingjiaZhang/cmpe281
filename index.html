@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<style type="text/css">
+		/*sign in page*/
+		#iframe1 
+			{
+        	border-radius: 10px;
+        	position: fixed;
+        	left:40%;
+        	top: 20px;
+        	background: #d4d4d4;
+        	transition: right 2s ease;
+    		}
+	</style>
+</head>
+<body>
+	<iframe id="iframe1" src="/Users/zhangtingjia/Desktop/临时文件/fp/sign_in.html" width="400" height="300" style="display:none;margin:0 auto">
+	</iframe>
+	<div id="nav" style="height: 100px;width: 100%">
+		<button style="float: right;" onclick="account()">My account</button>
+		<button style="float: right;" onclick="sign_in()">Sign in</button>
+	</div>
+	<div id="body"style="height: 500px;width: 100%">
+
+	</div>
+
+	<div id="foot" style="height:50px;width: 100%">
+		<p>CMPE272 final project</p>
+	</div>
+
+</body>
+
+
+
+<script type="text/javascript">
+
+	var status = 1
+
+	function sign_in(){
+		if (status == 1) {
+                document.getElementById("iframe1").style.display = "list-item";
+                status = 2;
+            } else if (status == 2) {
+                document.getElementById("iframe1").style.display = "none";
+                status = 1;
+            }
+	}
+
+	function account(){
+		var status = 0;
+		if(status!=1){
+			alert("log in first, if u have no account ,pls sign in before log in.")
+			window.location.href="https://www.baidu.com/";
+		}
+	}
+</script>
+</html>
